@@ -26,19 +26,25 @@
       <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">My Projects</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Cards -->
+        <!-- Loop through projects dynamically -->
         <div
           v-for="project in projects"
           :key="project.id"
           class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
         >
-          <div class="h-48 flex items-center justify-center">
-            <img :src="project.imageUrl" :alt="project.title" class="w-full h-full object-cover" />
-            >
-            <span class="text-white text-2xl font-bold"> {{ project.title }}</span>
+          <!-- Project Image -->
+          <div class="h-48 bg-gray-200 overflow-hidden">
+            <img
+              :src="project.imageUrl"
+              :alt="project.title"
+              class="w-full h-full object-cover"
+            />
           </div>
+
+          <!-- Project Content -->
           <div class="p-6">
             <h3 class="text-xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
+
             <!-- Award Badge -->
             <div v-if="project.award" class="mb-3">
               <span
@@ -47,17 +53,19 @@
                 {{ project.award }}
               </span>
             </div>
+
             <p class="text-gray-600 mb-4">{{ project.description }}</p>
-          </div>
-          <!-- Technologies -->
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span
-              v-for="tech in project.technologies"
-              :key="tech"
-              class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-            >
-              {{ tech }}
-            </span>
+
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                v-for="tech in project.technologies"
+                :key="tech"
+                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+              >
+                {{ tech }}
+              </span>
+            </div>
           </div>
         </div>
       </div>
