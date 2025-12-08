@@ -32,13 +32,53 @@
           :key="project.id"
           class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
         >
-          <!-- Project Image -->
-          <div class="h-48 bg-gray-200 overflow-hidden">
+          <div class="h-48 bg-gray-200 overflow-hidden relative group">
+            <!-- Images -->
             <img
-              :src="project.imageUrl"
+              v-if="project.images && project.images.length > 0"
+              :src="project.images[currentImageIndex[project.id] || 0]"
               :alt="project.title"
               class="w-full h-full object-cover"
             />
+            <div
+              v-else
+              class="h-full bg-gray-500 flex items-center justify-center"
+            >
+              <span class="text-white text-2xl font-bold">{{ project.title }}</span>
+            </div>
+
+            <!-- Arrows -->
+            <template v-if="project.images && project.images.length > 1">
+              <!-- Left Arrow -->
+              <button
+                @click="previousImage(project.id, project.images.length)"
+                class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-lg hover:scale-110 text-xl font-bold"
+              >
+                ‹
+              </button>
+
+              <!-- Right Arrow -->
+              <button
+                @click="nextImage(project.id, project.images.length)"
+                class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all shadow-lg hover:scale-110 text-xl font-bold"
+              >
+                ›
+              </button>
+
+              <!-- Image indicators -->
+              <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                <div
+                  v-for="(img, index) in project.images"
+                  :key="index"
+                  class="w-2 h-2 rounded-full transition-all"
+                  :class="
+                    (currentImageIndex[project.id] || 0) === index
+                      ? 'bg-white w-4'
+                      : 'bg-white/50'
+                  "
+                ></div>
+              </div>
+            </template>
           </div>
 
           <!-- Project Content -->
@@ -56,7 +96,7 @@
 
             <p class="text-gray-600 mb-4">{{ project.description }}</p>
 
-            <!-- Languages -->
+            <!-- Technologies -->
             <div class="flex flex-wrap gap-2 mb-4">
               <span
                 v-for="tech in project.languages"
@@ -74,5 +114,25 @@
 </template>
 
 <script setup lang="ts">
+import { reactive } from 'vue'
 import { projects } from '../data/projects'
+
+// Track current image index for each project
+const currentImageIndex = reactive<Record<number, number>>({})
+
+// Initialize indices
+projects.forEach((project) => {
+  currentImageIndex[project.id] = 0
+})
+
+// Navigate to next image
+const nextImage = (projectId: number, totalImages: number) => {
+  currentImageIndex[projectId] = (currentImageIndex[projectId] + 1) % totalImages
+}
+
+// Navigate to previous image
+const previousImage = (projectId: number, totalImages: number) => {
+  currentImageIndex[projectId] =
+    (currentImageIndex[projectId] - 1 + totalImages) % totalImages
+}
 </script>
