@@ -85,6 +85,8 @@
           <div class="p-6">
             <h3 class="text-xl font-bold text-gray-800 mb-2">{{ project.title }}</h3>
 
+            <p class="text-gray-600 mb-4">{{ project.description }}</p>
+
             <!-- Award Badge -->
             <div v-if="project.award" class="mb-3">
               <span
@@ -93,8 +95,6 @@
                 {{ project.award }}
               </span>
             </div>
-
-            <p class="text-gray-600 mb-4">{{ project.description }}</p>
 
             <!-- Technologies -->
             <div class="flex flex-wrap gap-2 mb-4">
