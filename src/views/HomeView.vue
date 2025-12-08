@@ -56,10 +56,10 @@
 
             <p class="text-gray-600 mb-4">{{ project.description }}</p>
 
-            <!-- Technologies -->
+            <!-- Languages -->
             <div class="flex flex-wrap gap-2 mb-4">
               <span
-                v-for="tech in project.technologies"
+                v-for="tech in project.languages"
                 :key="tech"
                 class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
               >
