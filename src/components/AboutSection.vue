@@ -53,6 +53,6 @@
 
 <script setup lang="ts">
 const goToLink = () => {
-  window.open('https://www.linkedin.com/feed/zoiye-van-leeuwen-8640543a0/', '_blank')
+  window.open('https://www.linkedin.com/feed/https://www.linkedin.com/in/zoiye-van-leeuwen-8640543a0/')
 }
 </script>

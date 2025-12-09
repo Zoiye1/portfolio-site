@@ -7,6 +7,14 @@ import webshop5 from '../assets/webshop5.png'
 import webshop6 from '../assets/webshop6.png'
 import elections1 from '../assets/Elections1.png'
 import elections2 from '../assets/Elections2.png'
+import elections3 from '../assets/Elections3.png'
+import game1 from '../assets/game1.png'
+import game2 from '../assets/game2.png'
+import game3 from '../assets/game3.png'
+import game4 from '../assets/game4.png'
+
+
+
 
 
 
@@ -27,7 +35,7 @@ export const projects: Project[] = [
     title: "The Game",
     description: "A Flash/Nintendo-style pixel art game developed with a team of 4 during my first year at HVA. Built using a custom game engine, this project helped me master OOP principles including encapsulation, abstraction, inheritance, and polymorphism, as well as web components.",
     technologies: ["TypeScript", "HTML", "CSS"],
-    images: [gameGif],
+    images: [gameGif, game1, game2, game3, game4],
     award: "🏆 Game of the Year Award - HVA"
   },
   {
@@ -42,6 +50,6 @@ export const projects: Project[] = [
     title: "Election Website",
     description: "An election data visualization platform developed with a team of 4 students. Built by parsing official Rijksoverheid XML datasets and presenting them through a Vue/Tailwind/TypeScript frontend with a Java backend, this project helped me master data parsing and analysis, RESTful API architecture, layered software design following MVC principles, and the integration of complex datasets into user-friendly web applications.",
     technologies: ["Vue", "Tailwind", "Java", "Typescript", "Hibernate/JPA"],
-    images: [elections1, elections2],
+    images: [elections1, elections2, elections3],
   }
 ]
