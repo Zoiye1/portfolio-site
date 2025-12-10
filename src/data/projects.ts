@@ -13,11 +13,6 @@ import game2 from '../assets/game2.png'
 import game3 from '../assets/game3.png'
 import game4 from '../assets/game4.png'
 
-
-
-
-
-
 export interface Project {
   id: number
   title: string
@@ -34,7 +29,7 @@ export const projects: Project[] = [
     id: 1,
     title: "The Game",
     description: "A Flash/Nintendo-style pixel art game developed with a team of 4 during my first year at HVA. Built using a custom game engine, this project helped me master OOP principles including encapsulation, abstraction, inheritance, and polymorphism, as well as web components.",
-    technologies: ["TypeScript", "HTML", "CSS"],
+    technologies: ["Typescript", "HTML", "CSS"],
     images: [gameGif, game1, game2, game3, game4],
     award: "🏆 Game of the Year Award - HVA"
   },
