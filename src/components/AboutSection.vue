@@ -1,6 +1,6 @@
 <template>
   <section class="max-w-4xl mx-auto mb-16">
-    <div class="bg-transparent rounded-lg shadow-lg p-8">
+    <div class="bg-transparent rounded-lg backdrop-blur-sm p-8">
       <div class="flex flex-col md:flex-row items-center gap-8">
         <!-- Profile Picture -->
         <img

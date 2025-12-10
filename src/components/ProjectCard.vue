@@ -2,7 +2,7 @@
   <article
     class="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
   >
-    <ImageCycle :images="project.images" :title="project.title" />
+    <ImageCarousel :images="project.images" :title="project.title" />
 
     <!-- Project Content -->
     <div class="p-6">
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import type { Project } from '../data/projects'
-import ImageCycle from './ImageCycle.vue'
+import ImageCarousel from './ImageCarousel.vue'
 
 defineProps<{
   project: Project
