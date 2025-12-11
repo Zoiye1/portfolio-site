@@ -31,7 +31,9 @@ export const projects: Project[] = [
     description: "A Flash/Nintendo-style pixel art game developed with a team of 4 during my first year at HVA. Built using a custom game engine, this project helped me master OOP principles including encapsulation, abstraction, inheritance, and polymorphism, as well as web components.",
     technologies: ["Typescript", "HTML", "CSS"],
     images: [gameGif, game1, game2, game3, game4],
-    award: "🏆 Game of the Year Award - HVA"
+    award: "🏆 Game of the Year Award - HVA",
+    githubUrl: "https://github.com/Zoiye1/Lucastars-Game",
+    demoUrl: "https://lucastars-game-web.vercel.app/"
   },
   {
     id: 2,
@@ -39,6 +41,8 @@ export const projects: Project[] = [
     description: "An e-commerce web application developed with a team of 4 students. Built using HTML, CSS, and TypeScript, this project taught me how to design and implement custom API endpoints, handle RESTful architecture, and manage client-server communication.",
     technologies: ["Typescript", "HTML", "CSS"],
     images: [webshop6, webshop1, webshop2, webshop3, webshop4, webshop5],
+    githubUrl: "https://github.com/Zoiye1/Lucastars-Webshop",
+    demoUrl: "https://lucastars-game-web.onrender.com/"
   },
   {
     id: 3,
