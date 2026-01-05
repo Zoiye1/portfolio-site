@@ -12,6 +12,9 @@ import game1 from '../assets/game1.png'
 import game2 from '../assets/game2.png'
 import game3 from '../assets/game3.png'
 import game4 from '../assets/game4.png'
+import docuwise1 from '../assets/docuwise1.png'
+import docuwise2 from '../assets/docuwise2.png'
+
 
 export interface Project {
   id: number
@@ -37,12 +40,11 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Webshop",
-    description: "An e-commerce web application developed with a team of 4 students. Built using HTML, CSS, and TypeScript, this project taught me how to design and implement custom API endpoints, handle RESTful architecture, and manage client-server communication.",
-    technologies: ["Typescript", "HTML", "CSS"],
-    images: [webshop6, webshop1, webshop2, webshop3, webshop4, webshop5],
-    githubUrl: "https://github.com/Zoiye1/Lucastars-Webshop",
-    demoUrl: "https://lucastars-game-web.onrender.com/"
+    title: "Intelligent Document Searcher",
+    description: "An AI-powered document processing platform built with Python. Users can upload PDFs and images, which are processed using OCR (Tesseract) to extract text, NLP (spaCy) to identify entities like names, dates, and locations, and semantic search (ChromaDB) to find documents by meaning rather than exact keywords. Built with a FastAPI backend, PostgreSQL database, and Streamlit frontend, fully containerized with Docker.",
+    technologies: ["Python", "FastAPI", "PostgreSQL", "spaCy", "ChromaDB", "Docker", "Streamlit"],
+    images: [docuwise1, docuwise2],
+    githubUrl: "https://github.com/Zoiye1/docuwise",
   },
   {
     id: 3,
@@ -50,5 +52,16 @@ export const projects: Project[] = [
     description: "An election data visualization platform developed with a team of 4 students. Built by parsing official Rijksoverheid XML datasets and presenting them through a Vue/Tailwind/TypeScript frontend with a Java backend, this project helped me master data parsing and analysis, RESTful API architecture, layered software design following MVC principles, and the integration of complex datasets into user-friendly web applications.",
     technologies: ["Vue", "Tailwind", "Java", "Typescript", "Hibernate/JPA"],
     images: [elections1, elections2, elections3],
-  }
+  },
+
+  {
+    id: 4,
+    title: "Webshop",
+    description: "An e-commerce web application developed with a team of 4 students. Built using HTML, CSS, and TypeScript, this project taught me how to design and implement custom API endpoints, handle RESTful architecture, and manage client-server communication.",
+    technologies: ["Typescript", "HTML", "CSS"],
+    images: [webshop6, webshop1, webshop2, webshop3, webshop4, webshop5],
+    githubUrl: "https://github.com/Zoiye1/Lucastars-Webshop",
+    demoUrl: "https://lucastars-game-web.onrender.com/"
+  },
+
 ]

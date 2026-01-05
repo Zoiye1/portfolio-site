@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row items-center gap-8">
         <!-- Profile Picture -->
         <img
-          src="../assets/profile.jpg"
+          src="../assets/profile2.png"
           alt="Profile Picture"
           class="rounded-full object-cover shadow-lg"
           style="width: 112px; height: 112px"
